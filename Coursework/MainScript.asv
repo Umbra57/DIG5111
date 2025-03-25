@@ -1,6 +1,5 @@
 % Main script to be run
 
-%Loading 2 files in
 [File1, location1] = uigetfile('*.wav','Select the first file to compare');
 audioFile1 = fullfile(location1,File1);
 [Sig1, Fs1] = audioread(audioFile1);
@@ -9,7 +8,6 @@ audioFile1 = fullfile(location1,File1);
 audioFile2 = fullfile(location2,File2);
 [Sig2, Fs2] = audioread(audioFile2);
 
-%Normalisation and variable initialisation
 Samples1 = length(Sig1);
 Duration1 = Samples1/Fs1;
 Samples2 = length(Sig2);
